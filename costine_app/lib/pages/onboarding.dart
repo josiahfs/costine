@@ -6,87 +6,92 @@ class OnboardingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+          backgroundColor: Colors.white,
           body: Stack(
-        children: [
-          Image.asset(
-            'assets/onboard.png',
-            width: MediaQuery.of(context).size.width,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(
-              bottom: 60,
-            ),
-            child: Center(
-              child: Image.asset(
-                'assets/people.png',
+            children: [
+              Image.asset(
+                'assets/onboard.png',
+                width: MediaQuery.of(context).size.width,
               ),
-            ),
-          ),
-          Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Text(
-                  'Spend Smarter',
-                  style: GoogleFonts.inter(
-                      color: Color(0xff553C8B),
-                      fontSize: 36,
-                      fontWeight: FontWeight.bold),
+              Padding(
+                padding: const EdgeInsets.only(
+                  bottom: 150,
                 ),
-                Text(
-                  'Save More',
-                  style: GoogleFonts.inter(
-                      color: Color(0xff553C8B),
-                      fontSize: 36,
-                      fontWeight: FontWeight.bold),
+                child: Center(
+                  child: Image.asset(
+                    'assets/people.png',
+                    width: 280,
+                  ),
                 ),
-                SizedBox(
-                  height: 26,
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(40),
-                      color: Color(0xff553C8B)),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 130, vertical: 13),
-                    child: Text(
-                      'Get Started',
+              ),
+              Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text(
+                      'Spend Smarter',
                       style: GoogleFonts.inter(
-                          color: Color(0xffffffff),
-                          fontSize: 18,
-                          fontWeight: FontWeight.w400),
+                          color: Color(0xff553C8B),
+                          fontSize: 36,
+                          fontWeight: FontWeight.bold),
                     ),
-                  ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 30),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Already have account?',
-                        style: GoogleFonts.inter(fontSize: 14),
+                    Text(
+                      'Save More',
+                      style: GoogleFonts.inter(
+                          color: Color(0xff553C8B),
+                          fontSize: 36,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(
+                      height: 26,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 28),
+                      child: Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(40),
+                            color: Color(0xff553C8B)),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 102, vertical: 13),
+                          child: Text(
+                            'Get Started',
+                            style: GoogleFonts.inter(
+                                color: Color(0xffffffff),
+                                fontSize: 18,
+                                fontWeight: FontWeight.w400),
+                          ),
+                        ),
                       ),
-                      SizedBox(
-                        width: 4,
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 50),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'Already have account?',
+                            style: GoogleFonts.inter(fontSize: 14),
+                          ),
+                          SizedBox(
+                            width: 4,
+                          ),
+                          Text(
+                            'Log in',
+                            style: GoogleFonts.inter(
+                                fontSize: 14, color: Color(0xff553C8B)),
+                          )
+                        ],
                       ),
-                      Text(
-                        'Log in',
-                        style: GoogleFonts.inter(
-                            fontSize: 14, color: Color(0xff553C8B)),
-                      )
-                    ],
-                  ),
-                )
-              ],
-            ),
-          )
-        ],
-      )),
+                    )
+                  ],
+                ),
+              )
+            ],
+          )),
     );
   }
 }

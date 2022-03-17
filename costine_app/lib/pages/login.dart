@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class RegisterScreen extends StatelessWidget {
-  const RegisterScreen({Key? key}) : super(key: key);
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class RegisterScreen extends StatelessWidget {
                       height: 24,
                     ),
                     Text(
-                      'Register',
+                      'Login',
                       style: GoogleFonts.inter(
                           fontSize: 24,
                           color: Color(0xffCCC1FF),
@@ -41,7 +41,7 @@ class RegisterScreen extends StatelessWidget {
                       height: 8,
                     ),
                     Text(
-                      'Register to manage your expenses',
+                      'Login to your account',
                       style: GoogleFonts.inter(
                           fontSize: 16,
                           color: Color(0xffCCC1FF),
@@ -67,26 +67,7 @@ class RegisterScreen extends StatelessWidget {
                               height: 38,
                             ),
                             Text(
-                              'USERNAME',
-                              style: GoogleFonts.inter(
-                                  fontSize: 12, fontWeight: FontWeight.w400),
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Container(
-                              height: 50,
-                              child: TextField(
-                                  decoration: InputDecoration(
-                                      border: OutlineInputBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(8)))),
-                            ),
-                            SizedBox(
-                              height: 16,
-                            ),
-                            Text(
-                              'EMAIL',
+                              'USERNAME OR EMAIL',
                               style: GoogleFonts.inter(
                                   fontSize: 12, fontWeight: FontWeight.w400),
                             ),
@@ -120,46 +101,55 @@ class RegisterScreen extends StatelessWidget {
                                           borderRadius:
                                               BorderRadius.circular(8)))),
                             ),
-                            Spacer(),
-                            Container(
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(12),
-                                  color: Color(0xff553C8B)),
-                              child: Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 107, vertical: 13),
-                                child: Text(
-                                  'Register',
-                                  style: GoogleFonts.inter(
-                                      color: Color(0xffffffff),
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w400),
+                            SizedBox(
+                              height: 16,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Forgot password?',
+                                  style: GoogleFonts.inter(fontSize: 14),
                                 ),
-                              ),
+                                SizedBox(
+                                  width: 4,
+                                ),
+                                Text(
+                                  'Get help signing in',
+                                  style: GoogleFonts.inter(
+                                      fontSize: 14, color: Color(0xff553C8B)),
+                                )
+                              ],
+                            ),
+                            Spacer(),
+                            Row(
+                              children: [
+                                Container(
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(12),
+                                      color: Color(0xff553C8B)),
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 88, vertical: 13),
+                                    child: Text(
+                                      'Login',
+                                      style: GoogleFonts.inter(
+                                          color: Color(0xffffffff),
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.w400),
+                                    ),
+                                  ),
+                                ),
+                                Spacer(),
+                                Image.asset(
+                                  'assets/google.png',
+                                  width: 50,
+                                )
+                              ],
                             ),
                             SizedBox(
                               height: 40,
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(bottom: 30),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    'Already have account?',
-                                    style: GoogleFonts.inter(fontSize: 14),
-                                  ),
-                                  SizedBox(
-                                    width: 4,
-                                  ),
-                                  Text(
-                                    'Log in',
-                                    style: GoogleFonts.inter(
-                                        fontSize: 14, color: Color(0xff553C8B)),
-                                  )
-                                ],
-                              ),
-                            )
                           ],
                         ),
                       ),
