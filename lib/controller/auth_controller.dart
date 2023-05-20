@@ -1,4 +1,5 @@
-import 'package:costine/views/onboarding_screen.dart';
+import 'package:costine/views/onboarding/onboarding_screen.dart';
+import 'package:costine/views/onboarding/welcome_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -21,12 +22,28 @@ class AuthController extends GetxController {
     ever(_user, _initialScreen);
   }
 
+  // _initialScreen(User? user) async {
+  //   if (user == null) {
+  //     await Get.offAll(() => OnboardingScreen());
+  //   } else {
+  //     // Get.offAll(() => NavigationPage());
+  //     Get.offAll(() => OnboardingScreen());
+  //   }
+  // }
+
   _initialScreen(User? user) async {
     if (user == null) {
       await Get.offAll(() => OnboardingScreen());
     } else {
-      // Get.offAll(() => NavigationPage());
-      Get.offAll(() => OnboardingScreen());
+      if (auth.currentUser!.metadata.creationTime ==
+          auth.currentUser!.metadata.lastSignInTime) {
+        // User just registered, go to the welcome page
+        Get.offAll(() => WelcomeScreen());
+      } else {
+        // User already logged in, go to the homepage
+        // Get.offAll(() => NavigationPage());
+        Get.offAll(() => OnboardingScreen());
+      }
     }
   }
 

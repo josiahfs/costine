@@ -1,6 +1,6 @@
 import 'package:costine/controller/auth_controller.dart';
 import 'package:costine/firebase_options.dart';
-import 'package:costine/views/onboarding_screen.dart';
+import 'package:costine/views/onboarding/onboarding_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

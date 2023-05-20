@@ -96,7 +96,7 @@ class LoginScreen extends StatelessWidget {
                                   obscureText: obscureText.value,
                                   decoration: InputDecoration(
                                     border: InputBorder.none,
-                                    hintText: 'Kata Sandi',
+                                    hintText: 'Password',
                                     floatingLabelBehavior:
                                         FloatingLabelBehavior.never,
                                     contentPadding: const EdgeInsets.all(20.0),
@@ -141,10 +141,47 @@ class LoginScreen extends StatelessWidget {
                                   child: Text(
                                     'Log In',
                                     style: GoogleFonts.roboto(
-                                        fontSize: 17,
+                                        fontSize: 18,
                                         fontWeight: FontWeight.bold,
                                         color: whiteColor),
                                   ),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 16,
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                AuthController.instance.loginWithGoogle();
+                              },
+                              child: Container(
+                                width: double.infinity,
+                                height: 56,
+                                decoration: BoxDecoration(
+                                    color: whiteColor,
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(16)),
+                                    border: Border.all(
+                                        color: lightGrayColor, width: 2.5)),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset(
+                                      'assets/images/google.png',
+                                      width: 32,
+                                    ),
+                                    const SizedBox(
+                                      width: 8,
+                                    ),
+                                    Text(
+                                      'Log In with Google',
+                                      style: GoogleFonts.roboto(
+                                          fontSize: 17,
+                                          fontWeight: FontWeight.bold,
+                                          color: darkBlueColor),
+                                    ),
+                                  ],
                                 ),
                               ),
                             ),
@@ -155,12 +192,15 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Text(
-                      'Forgot Password?',
-                      style: GoogleFonts.inter(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
-                        color: grayColor,
+                    GestureDetector(
+                      onTap: () {},
+                      child: Text(
+                        'Forgot Password?',
+                        style: GoogleFonts.inter(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                          color: grayColor,
+                        ),
                       ),
                     ),
                   ],
