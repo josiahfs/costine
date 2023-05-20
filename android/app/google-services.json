@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "947393038252",
+    "project_id": "costine-e2f22",
+    "storage_bucket": "costine-e2f22.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:947393038252:android:c0a30e1b824e4adea4dc09",
+        "android_client_info": {
+          "package_name": "com.example.costine"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "947393038252-v7iv6knuss5pmtu7kli4erdsrcqma5tq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD21yeKh-44g7LdHGQS1eCfT3ghc3SuFTM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "947393038252-v7iv6knuss5pmtu7kli4erdsrcqma5tq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
